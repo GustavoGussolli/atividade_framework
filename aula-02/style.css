@@ -1,0 +1,40 @@
+body {
+    background-color: #DDEEFF;
+    color: #ffffff;
+}
+
+.card {
+    background-color: #003366;
+    color: #ffffff;
+    border: 1px solid #00CCCC;
+}
+
+.form-label, h1, h3 {
+    color: #00CCCC;
+}
+
+.form-control, .form-select {
+    background-color: #002244;
+    color: #ffffff;
+    border: 1px solid #00CCCC;
+}
+
+.btn-primary {
+    background-color: #0099CC;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: purple;
+    transition: 1s;
+}
+
+.btn-success {
+    background-color: #0066AA;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: purple;
+    transition: 1s;
+}
