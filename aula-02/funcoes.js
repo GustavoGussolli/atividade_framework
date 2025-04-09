@@ -8,16 +8,14 @@ function configEstiloCabecalho() {
     let altura = document.getElementById("alturaCabecalho").value; 
     let largura = document.getElementById("larguraCabecalho").value; 
     let corBorda = document.getElementById("corBordaCabecalho").value; 
-    let sombra = document.getElementById("sombraCabecalho").value; 
     
     ctxCabecalho = `#cabecalho {
         background-color: ${bg};
         color: ${corFonte};
         font-size: ${tamFonte}pt;
-        height: ${altura}; /* Aplicar altura */
-        width: ${largura}; /* Aplicar largura */
-        border: 2px solid ${corBorda}; /* Borda */
-        box-shadow: ${sombra}; /* Sombra */
+        height: ${altura};
+        width: ${largura}; 
+        border: 2px solid ${corBorda};
     }\n`;
     
     return ctxCabecalho;
@@ -33,10 +31,10 @@ function configEstiloLinks() {
     ctxLinks = `a {
         color: ${corLink};
         text-decoration: ${aux};
-        transition: color 0.3s; /* Transição suave */
+        transition: color 0.3s;
     }
     a:hover {
-        color: ${corHover}; /* Cor ao passar o mouse */
+        color: ${corHover};
     }\n`;
     
     return ctxLinks;
@@ -62,6 +60,7 @@ function configHTMLCabecalho() {
 }
 
 function gerarCodigo() {
+    console.log("Função gerarCodigo chamada"); 
     // Geração do código CSS
     let codeCSS = document.querySelector("#codeCSS");
     let css = configEstiloCabecalho();
@@ -84,6 +83,7 @@ function gerarCodigo() {
 </html>`;
     
     codeHTML.value = ctxHTML;
+    console.log("Código HTML gerado:", ctxHTML);
 }
 
 function download(campo, arquivo) {
